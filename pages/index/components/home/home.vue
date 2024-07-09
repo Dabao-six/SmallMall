@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<view class="home-video">
-			<!-- <video :controls="false" :playsinline="true" :loop="true" :autoplay="true" object-fit="fill" src="/static/home2.mp4" ></video> -->
+			<video :controls="false" :playsinline="true" :loop="true" :autoplay="true" object-fit="fill" src="/static/home2.mp4" ></video>
 			<view class="home-notice">
 				<van-notice-bar background="#fff" left-icon="volume-o" scrollable text="技术是开发它的人的共同灵魂。" />
 			</view>
@@ -169,6 +169,7 @@
 	.home {
 		width: 100%;
 		height: 100%;
+		overflow-y: scroll;
 		.home-video {
 			width: 100%;
 			height: 200px;
