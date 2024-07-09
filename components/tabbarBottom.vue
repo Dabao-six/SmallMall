@@ -1,6 +1,6 @@
 <template>
 	<view class="tabbar-bottom">
-		<van-tabbar v-model="active" @change="handleTabChange">
+		<van-tabbar v-model="active" @change="handleTabChange" :placeholder="true" >
 			<!-- 自定义标签1 -->
 			<van-tabbar-item v-for="(icon,index) in tabBar">
 				<span>{{icon.text}}</span>
@@ -57,6 +57,7 @@
 			handleTabChange(index) {
 				console.log(index);
 				this.active = index;
+				this.$emit('handleTabChange',index)
 			}
 		}
 	}
@@ -64,6 +65,8 @@
 
 <style lang="scss" scoped>
 	.tabbar-bottom .van-tabbar {
+		width: 100%;
+		height: 100rpx;
 		box-shadow: 0 1px 6px #0003;
 	}
 	.center-img{

@@ -2,32 +2,41 @@
 	<view class="main">
 		<navTop />
 		<view class="content">
-			
+			<home v-show="active === 0"/>
+			<statrting  v-show="active === 1" />
+			<records  v-show="active === 2" />
 		</view>
-		<tabbarBottom />
+		<tabbarBottom @handleTabChange="handleTabChange"/>
 	</view>
 </template>
 
 <script>
 	import navTop from '@/components/navTop.vue'
 	import tabbarBottom from '@/components/tabbarBottom.vue'
+	
+	import home from '@/pages/index/components/home/home.vue'
+	import statrting from '@/pages/index/components/statrting/statrting.vue'
+	import records from '@/pages/index/components/records/records.vue'
 	export default {
 		components: {
 			navTop,
-			tabbarBottom
+			tabbarBottom,
+			home,
+			statrting,
+			records
 		},
 		data() {
 			return {
-				title: 'Hello',
-				 active: 0  // 默认选中第一个选项卡
+				active:0
 			}
 		},
 		onLoad() {
-
+			
 		},
 		methods: {
-			handleTabChange(index) {
-			  this.active = index;
+			handleTabChange(e){
+				console.log(e);
+				this.active = e
 			}
 		}
 	}
@@ -35,28 +44,19 @@
 
 <style lang="scss" scoped>
 	.main {
+		width: 100vw;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		position: fixed;
+		overflow: hidden;
 	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+	.content {
+		width: 100%;
+		
+		flex: 1;
+		overflow: auto;
 	}
 </style>

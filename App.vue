@@ -16,4 +16,8 @@
 	/*每个页面公共css */
 	@import '@/node_modules/vant/lib/index.css';
 	@import "@/styles/reset.scss";
+	image {
+		width: 100%;
+		height: 100%;
+	}
 </style>
