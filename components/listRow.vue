@@ -3,7 +3,7 @@
 		<view class="heard-logo">
 			<image src="/static/nav/logo.png" mode="aspectFit" />
 		</view>
-		<view class="heard-user" @click="handleTomy">
+		<view class="heard-user">
 			<image src="/static/nav/me.png" mode="aspectFit" />
 		</view>
 	</view>
@@ -11,7 +11,7 @@
 
 <script>
 	export default {
-		name: "navTop",
+		name: "listRow",
 		props: {
 			navMenu: {
 				type: Boolean,
@@ -29,11 +29,6 @@
 		methods: {
 			handleMenu() {
 				this.$emit('handleMenu'); // 触发自定义事件
-			},
-			handleTomy(){
-				uni.navigateTo({
-					url:'/pages/my/index'
-				})
 			},
 		}
 	}

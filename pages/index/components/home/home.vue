@@ -8,7 +8,7 @@
 		</view>
 		<view class="home-product">
 			<view class="product">
-				<view class="product-item" v-for="item in 8">
+				<view class="product-item" v-for="item in 8" @click="handleTo(item)">
 					<view class="item-box">
 						<view class="item-img">
 							<image src="../../../../static/images/Event.png" mode="aspectFill"></image>
@@ -24,10 +24,10 @@
 		
 		<view class="home-more">
 			<view class="home-more-top">
-				<view class="more-top-text">
+				<view class="more-top-text" >
 					Vip Levels
 				</view>
-				<view class="more-top-right">
+				<view class="more-top-right" @click="login">
 					<view class="more-top-text">
 						View More
 					</view>
@@ -59,12 +59,18 @@
 				</view>
 			</view>
 		</view>
+		<myDialog :show="show" @CancelShow="CancelShow"></myDialog>
+
 	</view>
 </template>
 
 <script>
+	import myDialog from '@/components/myDialog.vue'
 	export default {
 		name: "home",
+		components:{
+			myDialog
+		},
 		props: {
 			// active:{
 			// 	type: Number,
@@ -73,20 +79,74 @@
 		},
 		data() {
 			return {
-				
+				show:false
 			}
 		},
 		created() {
 	
 		},
 		methods: {
-
+			handleTo(item){
+				if(item==1){
+					this.show = true
+				}if(item==2){
+					this.handleToEvent()
+				}if(item==3){
+					this.handleTodeposit()
+				}if(item==4){
+					this.handleTowithdraw()
+				}if(item==5){
+					this.handleToClause()
+				}if(item==6){
+					this.handleToCertificate()
+				}if(item==7){
+					this.handleToClause()
+				}if(item==8){
+					this.handleToClause()
+				}
+			},
+			handleToCertificate(){
+				uni.navigateTo({
+					url:'/pages/Certificate/Certificate'
+				})
+			},
+			handleToClause(){
+				uni.navigateTo({
+					url:'/pages/Clause/Clause'
+				})
+			},
+			handleToEvent(){
+				uni.navigateTo({
+					url:'/pages/Event/Event'
+				})
+			},
+			handleTodeposit(){
+				uni.navigateTo({
+					url:'/pages/deposit/deposit'
+				})
+			},
+			handleTowithdraw(){
+				uni.navigateTo({
+					url:'/pages/withdraw/withdraw'
+				})
+			},
+			CancelShow(){
+				this.show = false
+			},
+			login(){
+				uni.navigateTo({
+					url:'/pages/login/login'
+				})
+			}
 		}
 	}
 	
 </script>
 
 <style lang="scss" scoped>
+	/deep/.van-dialog {
+		overflow: initial !important;
+	}
 	.home-more-bottom {
 		// padding: 20rpx;
 		width: 100%;
@@ -181,7 +241,7 @@
 				left: 50%;
 				bottom: -40rpx;
 				transform: translate(-50%,0);
-				width: 80%;
+				width: 90%;
 				position: absolute;
 			}
 		}

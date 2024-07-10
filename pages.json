@@ -6,6 +6,101 @@
 				"navigationStyle": "custom",
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path" : "pages/deposit/deposit",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/withdraw/withdraw",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my/profileItem/profileItem",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my/modify/modify",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my/updatePassword/updatePassword",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/login/login",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/register/register",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/register/tc/tc",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Event/Event",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Clause/Clause",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/Certificate/Certificate",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {

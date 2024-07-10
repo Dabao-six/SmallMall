@@ -10,9 +10,7 @@
 			  </scroll-view>
 		  </van-tab>
 		  <van-tab title="Pending">内容 2</van-tab>
-		  <van-tab title="Completed">
-									内容 3
-		  </van-tab>
+		  <van-tab title="Completed">内容 3</van-tab>
 		  <van-tab title="Undone">内容 4</van-tab>
 		</van-tabs>
 	</view>
