@@ -99,8 +99,8 @@
 			toptext="Ecads" 
 			bottomtext="Ecads" 
 			/>
-			<view class="my-btn">
-				<van-button block color="rgb(175, 175, 199)" plain type="info">Logout</van-button>
+			<view class="my-btn" @click="handleTologin">
+				<van-button block color="rgb(175, 175, 199)" plain type="info" >Logout</van-button>
 			</view>
 			
 			
@@ -145,6 +145,11 @@
 		},
 
 		methods: {
+			handleTologin(){
+				uni.navigateTo({
+					url:'/pages/login/login'
+				})
+			},
 			handleTodeposit(){
 				uni.navigateTo({
 					url:'/pages/deposit/deposit'

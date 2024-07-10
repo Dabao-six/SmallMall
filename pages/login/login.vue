@@ -23,7 +23,7 @@
 					<input placeholder="Password" />
 				</view>
 			</view>
-			<view class="login-btn">
+			<view class="login-btn" @click="handleTohome">
 				<van-button  block color="#6A5BFF"  type="info" >Login</van-button>
 			</view>
 			<view class="login-text-mini">
@@ -52,6 +52,11 @@
 			
 		},
 		methods: {
+			handleTohome(){
+				uni.navigateTo({
+					url:'/pages/index/index'
+				})
+			},
 			handleToRegister(){
 				uni.navigateTo({
 					url:'/pages/register/register'
