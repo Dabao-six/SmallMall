@@ -33,17 +33,17 @@
 				active: 0, // 默认选中第一个选项卡
 				tabBar:[
 					{
-						text:'你的',
+						text:'Home',
 						active:'/static/tabBar/home.png',
 						inactive:'/static/tabBar/home_h.png',
 					},
 					{
-						text:'中间',
+						text:'Starting',
 						active:'',
 						inactive:'',
 					},
 					{
-						text:'我的',
+						text:'Records',
 						active:'/static/tabBar/records.png',
 						inactive:'/static/tabBar/records_h.png',
 					}

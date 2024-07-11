@@ -94,10 +94,11 @@
 			</view>
 			<list 
 			@handleCellTop="handleDialogShow"
+			@handleCellBottom="handleToNotifications"
 			toplogo="../../static/images/Event.png" 
 			bottomlogo="../../static/images/Event.png" 
-			toptext="Ecads" 
-			bottomtext="Ecads" 
+			toptext="Contact Us" 
+			bottomtext="Notifications" 
 			/>
 			<view class="my-btn" @click="handleTologin">
 				<van-button block color="rgb(175, 175, 199)" plain type="info" >Logout</van-button>
@@ -145,6 +146,11 @@
 		},
 
 		methods: {
+			handleToNotifications(){
+				uni.navigateTo({
+					url:'/pages/Notifications/Notifications'
+				})
+			},
 			handleTologin(){
 				uni.navigateTo({
 					url:'/pages/login/login'
@@ -214,12 +220,13 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
-		
+		color: white;
 	}
 	.top-card-top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		
 		.top-card-img {
 			width: 110rpx;
 			height: 110rpx;
@@ -234,8 +241,6 @@
 			flex-direction: column;
 			font-size: 28rpx;
 			.card-info-text {
-				
-
 				display: flex;
 				align-items: center;
 			}
@@ -256,7 +261,7 @@
 			align-items: center;
 			justify-content: space-between;
 			padding: 20rpx 0;
-			color: white;
+			
 		}
 	}
 	.top-card-bottom {

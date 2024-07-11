@@ -146,6 +146,7 @@
 		}
 	}
 	.statrting-product-box {
+		background: #fff;
 		margin: 0 auto;
 		width: 90%;
 		padding: 30rpx;
@@ -198,6 +199,7 @@
 		padding: 30rpx;
 	}
 	.top-list-item {
+		background: #fff;
 		padding: 20rpx;
 		border-radius: 24rpx;
 		overflow: hidden;
@@ -233,12 +235,14 @@
 		width: 100%;
 		height: 100%;
 		overflow-y: scroll;
+		background: #f4f2f5;
 	}
 	.statrting-top {
-		padding: 0 30rpx;
+		padding: 30rpx 30rpx 0 30rpx;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		
 	}
 	.statrting-top-left {
 		display: flex;

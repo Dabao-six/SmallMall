@@ -101,6 +101,14 @@
 				"navigationStyle": "custom",
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/Notifications/Notifications",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {

@@ -9,7 +9,6 @@
 		</view>
 		<tabbarBottom @handleTabChange="handleTabChange"/>
 		<view class="tips">
-		
 				<view class="tips-user">
 					<image src="../../static/images/user.png" mode="aspectFill"></image>
 				</view>
@@ -26,7 +25,6 @@
 						Welcome Back
 					</view>
 				</view>
-				
 		</view>
 	</view>
 </template>
@@ -82,6 +80,7 @@
 
 	}
 	.tips {
+		z-index: 100;
 		position: absolute;
 		left: 0;
 		bottom: 15%;
