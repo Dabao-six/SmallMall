@@ -109,6 +109,22 @@
 				"navigationStyle": "custom",
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/my/Personal/Personal",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/my/updateTransaction/updateTransaction",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : ""
+			}
 		}
 	],
 	"globalStyle": {

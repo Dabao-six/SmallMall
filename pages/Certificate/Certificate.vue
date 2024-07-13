@@ -3,7 +3,7 @@
 		<navBlack title="Certificate"/>
 		<view class="content">
 			<view class="bg-img">
-				<image src="../../static/images/1715902593067531253.png" mode="aspectFill"></image>
+				<image src="../../static/images/1715902593067531253.png" mode="aspectFit"></image>
 			</view>
 		</view>
 	</view>

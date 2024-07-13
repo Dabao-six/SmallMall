@@ -45,7 +45,7 @@
 				</view>
 			</view>
 			
-			<view class="common-title">
+			<view class="common-title" >
 				Start Optimization (3/3)
 			</view>
 			
@@ -58,7 +58,7 @@
 					</view>
 				</view>
 				<view class="product-box-bottom">
-					<view class="product-box-bottom-btn">
+					<view class="product-box-bottom-btn" @click="handleStart">
 						Start (40/40) 
 					</view>
 				</view>
@@ -85,6 +85,8 @@
 </template>
 
 <script>
+
+	import  Toast  from '@/node_modules/vant/lib/toast';
 	export default {
 		name: "statrting",
 		components: {
@@ -103,10 +105,14 @@
 			}
 		},
 		onLoad() {
-			
+
 		},
 		methods: {
-
+			handleStart(){
+				Toast({
+				  message: 'You have completed the task! Please withdraw or contact Customer Service for new tasks.',
+				});	
+			}
 		}
 	}
 </script>

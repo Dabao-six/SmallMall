@@ -5,8 +5,8 @@
 			<van-tabbar-item v-for="(icon,index) in tabBar">
 				<span>{{icon.text}}</span>
 				<view v-show="index == 1" class="center-img">
-					<img v-show="active != 1" src="/static/tabBar/starting2.png">
-					<img v-show="active == 1" src="/static/tabBar/starting2_h.png">
+					<img v-show="active != 1" src="../static/tabBar/starting2.png">
+					<img v-show="active == 1" src="../static/tabBar/starting2_h.png">
 				</view>
 				<template #icon="props">
 
@@ -34,8 +34,8 @@
 				tabBar:[
 					{
 						text:'Home',
-						active:'/static/tabBar/home.png',
-						inactive:'/static/tabBar/home_h.png',
+						active:'../static/tabBar/home.png',
+						inactive:'../static/tabBar/home_h.png',
 					},
 					{
 						text:'Starting',
@@ -44,8 +44,8 @@
 					},
 					{
 						text:'Records',
-						active:'/static/tabBar/records.png',
-						inactive:'/static/tabBar/records_h.png',
+						active:'../static/tabBar/records.png',
+						inactive:'../static/tabBar/records_h.png',
 					}
 				]
 			};

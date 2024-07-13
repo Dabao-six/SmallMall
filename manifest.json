@@ -73,7 +73,7 @@
         "title" : "smallMall",
         "router" : {
             "mode" : "hash",
-            "base" : ""
+            "base" : "./"
         }
     }
 }

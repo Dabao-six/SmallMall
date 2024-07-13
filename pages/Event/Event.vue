@@ -3,7 +3,7 @@
 		<navBlack title="Event"/>
 		<view class="content">
 			<view class="bg-img">
-				<image src="../../static/images/1715903200120322743.jpg" mode="aspectFill"></image>
+				<image src="../../static/images/1715903200120322743.jpg" mode="aspectFit"></image>
 			</view>
 		</view>
 	</view>

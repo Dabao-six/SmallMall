@@ -1,6 +1,6 @@
 <template>
 	<view class="main">
-		<navBlack title="update Password"/>
+		<navBlack title="Update Transaction Password"/>
 		<view class="content">
 			<cell-pro title="Old Password" placeholder="Old Password" @updateText="updateText"/>
 			<cell-pro title="New Password" placeholder="New Password"/>
