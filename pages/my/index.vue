@@ -152,7 +152,7 @@
 				})
 			},
 			handleTologin(){
-				uni.navigateTo({
+				uni.reLaunch({
 					url:'/pages/login/login'
 				})
 			},

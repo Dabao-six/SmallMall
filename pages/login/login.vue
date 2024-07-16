@@ -53,7 +53,7 @@
 		},
 		methods: {
 			handleTohome(){
-				uni.navigateTo({
+				uni.reLaunch({
 					url:'/pages/index/index'
 				})
 			},

@@ -2,10 +2,10 @@
 	<view class="main">
 		<navTop />
 		<view class="content">
-			<home v-if="active === 0"/>
+
+			<home v-if="active === 0" @handleloading="handleloading"/>
 			<statrting  v-if="active === 1" />
 			<records  v-if="active === 2" />
-			
 		</view>
 		<tabbarBottom @handleTabChange="handleTabChange"/>
 		<view class="tips">
@@ -26,6 +26,11 @@
 					</view>
 				</view>
 		</view>
+		<view class="home-bg" v-if="bgloading">
+			<image src="../../static/images/login_bg.png"></image>
+			<van-loading v-if="bgloading" type="spinner" color="#ffffff" />
+		</view>
+		
 	</view>
 </template>
 
@@ -46,13 +51,17 @@
 		},
 		data() {
 			return {
-				active:0
+				active:0,
+				bgloading:true
 			}
 		},
 		onLoad() {
 			
 		},
 		methods: {
+			handleloading(flag){
+				this.bgloading = false
+			},
 			handleTabChange(e){
 				console.log(e);
 				this.active = e
@@ -62,6 +71,21 @@
 </script>
 
 <style lang="scss" scoped>
+	.home-bg {
+		background-color: #000;
+		z-index: 100%;
+		position: fixed;
+		z-index: 2000;
+		width: 100vw;
+		height: 100vh;
+		.van-loading {
+			z-index: 1000;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
 	.main {
 		width: 100vw;
 		height: 100vh;

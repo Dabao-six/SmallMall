@@ -1,7 +1,8 @@
 <template>
 	<view class="home">
 		<view class="home-video">
-			<video  :controls="false" muted  :playsinline="true" :loop="true" :autoplay="true" object-fit="fill"
+			<view v-if="!showbg" style="width: 100%;height: 200px;background-color: #00093d;position: absolute;top: 0;left: 0;z-index: 10;" ></view>
+			<video ref="myVideo"  @loadedmetadata="loadedmetadata"  :controls="false" muted  :playsinline="true" :loop="true" :autoplay="autoplay" object-fit="fill"
 				src="/static/home2.mp4"></video>
 			<view class="home-notice">
 				<van-notice-bar @click="handleToNotifications" background="#fff" left-icon="volume-o" scrollable text="技术是开发它的人的共同灵魂。" />
@@ -74,20 +75,41 @@
 			myDialog
 		},
 		props: {
-			// active:{
-			// 	type: Number,
-			// 	default: 0
-			// }
+
 		},
 		data() {
 			return {
-				show: false
+				show: false,
+				autoplay:false,
+				showbg:true
 			}
 		},
 		created() {
-
+			
+		},
+		mounted(){
+			this.$refs.myVideo.play
+			console.log(this.$refs.myVideo.play);
 		},
 		methods: {
+			videoLoaded(){
+				console.log("videoLoaded");
+			},
+			loadedmetadata(){
+				let that = this
+				this.autoplay = true
+				console.log("loadedmetadata");
+				setTimeout(()=>{
+					that.showbg = true
+					console.log("loadedmetadata1");
+					setTimeout(()=>{
+						console.log("loadedmetadata2");
+						that.$emit('handleloading',false)
+						
+					},500)
+				},1000)
+			},
+
 			handleTo(item) {
 				if (item == 1) {
 					this.show = true
@@ -273,6 +295,7 @@
 				transform: translate(-50%, 0);
 				width: 90%;
 				position: absolute;
+				z-index: 12;
 			}
 		}
 	}
